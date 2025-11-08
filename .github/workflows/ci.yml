@@ -25,7 +25,8 @@ jobs:
         run: npm install
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2
-        continue-on-error: true
+        with:
+          fetch-depth: 0
 
 
       - name: Run tests
