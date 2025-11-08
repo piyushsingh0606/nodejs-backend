@@ -32,6 +32,12 @@ jobs:
         with:
           scan-type: 'fs'
           scan-ref: '.'
+      - name: Upload trivy report as a Github artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: trivy-sbom-report
+          path: '${{ github.workspace }}/dependency-results.sbom.json'
+          retention-days: 1 # 90 is the default
 
 
       - name: Run tests
