@@ -27,6 +27,11 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         with:
           fetch-depth: 0
+      - name: Run Trivy vulnerability scanner in fs mode
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
 
 
       - name: Run tests
