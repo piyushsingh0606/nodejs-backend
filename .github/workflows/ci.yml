@@ -24,9 +24,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Gitleaks
-        uses: zricethezav/gitleaks-action@v2
-        with:
-          args: detect
+        uses: gitleaks/gitleaks-action@v2
 
 
       - name: Run tests
