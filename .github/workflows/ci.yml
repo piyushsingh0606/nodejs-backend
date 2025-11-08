@@ -1,0 +1,33 @@
+name: CI Workflow  # Name of the workflow
+
+on:
+  push:
+    branches:
+      - main       # Trigger on push to main branch
+  pull_request:
+    branches:
+      - main       # Trigger on PRs to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # The virtual environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3   # Step to clone repo
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
