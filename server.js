@@ -12,6 +12,8 @@ app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(express.json());
 
+const STRIPE_API_KEY = "sk_test_51Hc8G5abcd1234EFGH5678ijkl9012mnop3456"; //to test gitleaks
+
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
