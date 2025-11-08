@@ -8,5 +8,6 @@ module.exports = {
     'app/**/*.js',
     '!app/models/index.js',
     '!app/config/db.config.js'
-  ]
+  ],
+  testResultsProcessor: 'jest-sonar-reporter'
 };

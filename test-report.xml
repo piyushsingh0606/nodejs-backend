@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+  <file path="/Users/piyushkumar.singh/Downloads/node-express-mongodb-master/test/tutorial.test.js">
+    <testCase name="Tutorial API Tests POST /api/tutorials should create a new tutorial" duration="91"/>
+    <testCase name="Tutorial API Tests POST /api/tutorials should return 400 if title is missing" duration="4"/>
+    <testCase name="Tutorial API Tests POST /api/tutorials should set published to false by default" duration="6"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials should retrieve all tutorials" duration="12"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials should filter tutorials by title" duration="8"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials should return empty array when no tutorials exist" duration="8"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials/published should retrieve only published tutorials" duration="7"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials/published should return empty array when no published tutorials exist" duration="7"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials/:id should retrieve a single tutorial by id" duration="10"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials/:id should return 404 for non-existent tutorial" duration="5"/>
+    <testCase name="Tutorial API Tests GET /api/tutorials/:id should return 500 for invalid id format" duration="5"/>
+    <testCase name="Tutorial API Tests PUT /api/tutorials/:id should update a tutorial" duration="10"/>
+    <testCase name="Tutorial API Tests PUT /api/tutorials/:id should return 404 for non-existent tutorial" duration="5"/>
+    <testCase name="Tutorial API Tests PUT /api/tutorials/:id should handle update with empty object" duration="4"/>
+    <testCase name="Tutorial API Tests DELETE /api/tutorials/:id should delete a tutorial" duration="7"/>
+    <testCase name="Tutorial API Tests DELETE /api/tutorials/:id should return 404 for non-existent tutorial" duration="5"/>
+    <testCase name="Tutorial API Tests DELETE /api/tutorials/:id should return 500 for invalid id format" duration="4"/>
+    <testCase name="Tutorial API Tests DELETE /api/tutorials should delete all tutorials" duration="9"/>
+    <testCase name="Tutorial API Tests DELETE /api/tutorials should return 0 deleted when no tutorials exist" duration="7"/>
+  </file>
+</testExecutions>
